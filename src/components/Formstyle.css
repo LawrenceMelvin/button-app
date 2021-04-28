@@ -1,0 +1,33 @@
+.formDetails{
+    font-size: large;
+    font-weight: 400;
+    text-align: center;
+}
+.formDetails input{
+    padding: 8px;
+    margin: 15px;
+    cursor: pointer;
+}
+.closebtn{
+    cursor: pointer;
+}
+button{
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+input[type='reset']{
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+.clk  
+{   
+    margin-top: 5px;  
+    margin-bottom: 10px;
+    font-size: larger;
+}  

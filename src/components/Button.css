@@ -1,0 +1,29 @@
+.mainbtn{
+    margin: 30px;
+    cursor: pointer;
+}
+.formrender{
+    border: 2px solid black;
+    height: 70%;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.closebtn{
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 46%;
+}
+input[type="text"]{
+    padding: 10px;
+    padding-right: 425px;
+    display: inline-block;
+}
+.searchbar{
+    text-align: center;
+    margin-left: 10cm;
+}
+.heading{
+    text-align: center;
+}
