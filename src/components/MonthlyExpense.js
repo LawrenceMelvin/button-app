@@ -5,7 +5,15 @@ export class MonthlyExpense extends Component {
     constructor(){
         super();
         this.state={
-            cost:'',
+            food:'',
+            cloth:'',
+            shelter:'',
+            household:'',
+            transport:'',
+            health:'',
+            student:'',
+            personal:'',
+            miscellaneous:'',
         }
         this.expense = this.expense.bind(this)
     }
@@ -15,8 +23,15 @@ export class MonthlyExpense extends Component {
         })      
     }
     calculateCost(){
-        let costs = this.state.cost
-        return costs
+        let food = parseInt(this.state.food)
+        let cloth = parseInt(this.state.cloth)
+        let shelter = this.state.shelter
+        let house = this.state.household
+        let transport = this.state.transport
+        let health = this.state.health
+        let student = this.state.student
+        let person = this.state.personal
+        let miscellaneous = this.state.miscellaneous
     }
     render() {
         let calculatecost = this.calculateCost() 
