@@ -14,6 +14,7 @@ export class PrimeorNot extends Component {
     }
     calculatePrime(){
         let prime = this.state.prime
+        return prime
     }
     render() {
         let prime = this.calculatePrime()
