@@ -7,7 +7,7 @@ import Counter from "./Counter";
 import EvenorOdd from "./EvenorOdd";
 import Liveclock from "./Liveclock";
 import Mirror from "./Mirror";
-import MonthlyExpense from "./MonthlyExpense";
+import Tictactoe from "./XOGame/Tictactoe"
 import Notification from "./Notification";
 import PrimeorNot from "./PrimeorNot";
 
@@ -34,7 +34,7 @@ class Button extends Component {
     this.closeAppMirror = this.closeAppMirror.bind(this);
     this.closeAppExpense = this.closeAppExpense.bind(this);
     this.closeAppPrime = this.closeAppPrime.bind(this);
-    this.closeAppCounter = this.closeAppPrime.bind(this);
+    this.closeAppCounter = this.closeAppCounter.bind(this);
     this.state = {
       search: "",
       disp: "block",
@@ -244,7 +244,7 @@ class Button extends Component {
               color: "white",
             }}
           >
-            Monthly Expense
+            Tic Tac Toe
           </button>
           <button
             onClick={this.changeCounter}
@@ -272,8 +272,8 @@ class Button extends Component {
           className="expense formrender"
           style={{ display: this.state.allow6 }}
         >
-          <h2 className="heading">Monthly Expense</h2>
-          <MonthlyExpense />
+          <h2 className="heading">TIC TAC TOE</h2>
+          <Tictactoe />
           <button
             className="closebtn"
             onClick={this.closeAppExpense}
