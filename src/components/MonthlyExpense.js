@@ -32,7 +32,7 @@ export class MonthlyExpense extends Component {
     let health = this.state.health;
     let student = this.state.student;
     let person = this.state.personal;
-    let miscellaneou = this.state.miscellaneous;
+    let miscellaneous = this.state.miscellaneous;
   }
   render() {
     let calculatecost = this.calculateCost();

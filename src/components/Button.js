@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Agetoday from "./Agetoday";
 import BmiForm from "./BmiForm";
 import "./Button.css";
+import Counter from "./Counter";
 import EvenorOdd from "./EvenorOdd";
 import Liveclock from "./Liveclock";
 import Mirror from "./Mirror";
@@ -24,6 +25,7 @@ class Button extends Component {
     this.changemirror = this.changemirror.bind(this);
     this.changeExpense = this.changeExpense.bind(this);
     this.changePrime = this.changePrime.bind(this);
+    this.changeCounter = this.changeCounter.bind(this);
     this.closeAppAlert = this.closeAppAlert.bind(this);
     this.closeAppAtoD = this.closeAppAtoD.bind(this);
     this.closeAppBMI = this.closeAppBMI.bind(this);
@@ -32,6 +34,7 @@ class Button extends Component {
     this.closeAppMirror = this.closeAppMirror.bind(this);
     this.closeAppExpense = this.closeAppExpense.bind(this);
     this.closeAppPrime = this.closeAppPrime.bind(this);
+    this.closeAppCounter = this.closeAppPrime.bind(this);
     this.state = {
       search: "",
       disp: "block",
@@ -50,6 +53,8 @@ class Button extends Component {
       allow6: "none",
       disp7: "block",
       allow7: "none",
+      disp8: "block",
+      allow8: "none",
     };
   }
   keyboardEntry(event) {
@@ -172,6 +177,10 @@ class Button extends Component {
     this.setState({ disp7: "none" });
     this.setState({ allow7: "block" });
   }
+  changeCounter(){
+    this.setState({ disp8: "none" });
+    this.setState({ allow8: "block" });
+  }
   closeAppBMI() {
     this.setState({ allow: "none" });
     this.setState({ disp: "block" });
@@ -204,6 +213,10 @@ class Button extends Component {
     this.setState({ allow7: "none" });
     this.setState({ disp7: "block" });
   }
+  closeAppCounter(){
+    this.setState({ allow8: "none" });
+    this.setState({ disp8: "block" });
+  }
   render() {
     return (
       <div>
@@ -234,6 +247,17 @@ class Button extends Component {
             Monthly Expense
           </button>
           <button
+            onClick={this.changeCounter}
+            style={{
+              display: this.state.disp8,
+              backgroundColor: "rgb(19,20,50)",
+              marginTop: "30px",
+              color: "white",
+            }}
+          >
+            Click Counter
+          </button>
+          <button
             onClick={this.changePrime}
             style={{
               display: this.state.disp7,
@@ -243,7 +267,6 @@ class Button extends Component {
           >
             Prime or Not
           </button>
-          <button style={{ display: "block", marginTop: "30px" }}>Music</button>
         </div>
         <div
           className="expense formrender"
@@ -269,6 +292,20 @@ class Button extends Component {
             className="closebtn"
             onClick={this.closeAppPrime}
             style={{ backgroundColor: "rgb(66, 245, 78)" }}
+          >
+            Close
+          </button>
+        </div>
+        <div
+          className="clickcounter formrender"
+          style={{ display: this.state.allow8 }}
+        >
+          <h2 className="heading">Click Counter</h2>
+          <Counter />
+          <button
+            className="closebtn"
+            onClick={this.closeAppCounter}
+            style={{ backgroundColor: "rgb(19,20,50)",color:'white' }}
           >
             Close
           </button>
