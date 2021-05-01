@@ -7,23 +7,23 @@ class Agetoday extends Component {
     this.state = {
       age: "",
     };
-    this.handelChange = this.handelChange.bind(this);
-    this.calculateDays = this.calculateDays.bind(this);
-    this.checkReset = this.checkReset.bind(this);
+    //this.handelChange = this.handelChange.bind(this);
+    //this.calculateDays = this.calculateDays.bind(this);
+    //this.checkReset = this.checkReset.bind(this);
   }
-  handelChange(event) {
+  handelChange = (event) => {
     this.setState({
       age: event.target.value,
     });
   }
-  calculateDays() {
+  calculateDays = () => {
     if (this.state.age) {
       let ages = this.state.age;
       var days = ages * 365 * 12;
       return days;
     }
   }
-  checkReset() {
+  checkReset = () => {
     this.setState({ age: "" });
   }
   render() {

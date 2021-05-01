@@ -8,7 +8,6 @@ export class Notification extends Component {
       currentTime: "",
       alramTime: "",
     };
-    this.setAlarmTime = this.setAlarmTime.bind(this);
   }
   componentDidMount() {
     this.clock = setInterval(() => this.setCurrentTime(), 1000);
@@ -25,7 +24,7 @@ export class Notification extends Component {
     });
   }
 
-  setAlarmTime(event) {
+  setAlarmTime = (event) => {
     event.preventDefault();
     const inputAlarmTimeModified = event.target.value + ":00";
     this.setState({

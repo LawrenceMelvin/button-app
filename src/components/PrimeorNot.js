@@ -7,9 +7,8 @@ export class PrimeorNot extends Component {
     this.state = {
       prime: "",
     };
-    this.primeNumber = this.primeNumber.bind(this);
   }
-  primeNumber(event) {
+  primeNumber = (event) => {
     this.setState({ prime: event.target.value });
   }
   calculatePrime() {

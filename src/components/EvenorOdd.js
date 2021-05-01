@@ -8,19 +8,16 @@ export class EvenorOdd extends Component {
       num: "",
       result: "",
     };
-    this.checkOddorEven = this.checkOddorEven.bind(this);
-    this.checkNumber = this.checkNumber.bind(this);
-    this.checkReset = this.checkReset.bind(this);
   }
-  checkReset() {
+  checkReset = () => {
     this.setState({ num: "", result: "" });
   }
-  checkNumber(event) {
+  checkNumber = (event) => {
     this.setState({
       num: event.target.value,
     });
   }
-  checkOddorEven() {
+  checkOddorEven = () => {
     if (this.state.num) {
       let number = this.state.num;
       if (number % 2 == 0) {

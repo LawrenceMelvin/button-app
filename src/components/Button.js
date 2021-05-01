@@ -14,27 +14,6 @@ import PrimeorNot from "./PrimeorNot";
 class Button extends Component {
   constructor() {
     super();
-    this.searchCheck = this.searchCheck.bind(this);
-    this.keyboardEntry = this.keyboardEntry.bind(this);
-    this.finding = this.finding.bind(this);
-    this.changeColor = this.changeColor.bind(this);
-    this.changeAge = this.changeAge.bind(this);
-    this.changeAlert = this.changeAlert.bind(this);
-    this.changeTime = this.changeTime.bind(this);
-    this.changeNumber = this.changeNumber.bind(this);
-    this.changemirror = this.changemirror.bind(this);
-    this.changeExpense = this.changeExpense.bind(this);
-    this.changePrime = this.changePrime.bind(this);
-    this.changeCounter = this.changeCounter.bind(this);
-    this.closeAppAlert = this.closeAppAlert.bind(this);
-    this.closeAppAtoD = this.closeAppAtoD.bind(this);
-    this.closeAppBMI = this.closeAppBMI.bind(this);
-    this.closeAppTime = this.closeAppTime.bind(this);
-    this.closeAppNumber = this.closeAppNumber.bind(this);
-    this.closeAppMirror = this.closeAppMirror.bind(this);
-    this.closeAppExpense = this.closeAppExpense.bind(this);
-    this.closeAppPrime = this.closeAppPrime.bind(this);
-    this.closeAppCounter = this.closeAppCounter.bind(this);
     this.state = {
       search: "",
       disp: "block",
@@ -57,17 +36,17 @@ class Button extends Component {
       allow8: "none",
     };
   }
-  keyboardEntry(event) {
+  keyboardEntry = (event) => {
     if (event.key === "Enter") {
       this.finding();
     }
   }
-  searchCheck(event) {
+  searchCheck = (event) => {
     this.setState({
       search: event.target.value,
     });
   }
-  finding() {
+  finding = () => {
     if (
       this.state.search === "bmi calculator" ||
       this.state.search === "bmi" ||
@@ -145,75 +124,75 @@ class Button extends Component {
       });
     }
   }
-  changeColor() {
+  changeColor = () => {
     this.setState({ disp: "none" });
     this.setState({ allow: "block" });
   }
-  changeAge() {
+  changeAge = () => {
     this.setState({ disp1: "none" });
     this.setState({ allow1: "block" });
   }
-  changeAlert() {
+  changeAlert = () => {
     this.setState({ disp2: "none" });
     this.setState({ allow2: "block" });
   }
-  changeTime() {
+  changeTime = () => {
     this.setState({ disp3: "none" });
     this.setState({ allow3: "block" });
   }
-  changeNumber() {
+  changeNumber = () => {
     this.setState({ disp4: "none" });
     this.setState({ allow4: "block" });
   }
-  changemirror() {
+  changemirror = () => {
     this.setState({ disp5: "none" });
     this.setState({ allow5: "block" });
   }
-  changeExpense() {
+  changeExpense = () => {
     this.setState({ disp6: "none" });
     this.setState({ allow6: "block" });
   }
-  changePrime() {
+  changePrime = () => {
     this.setState({ disp7: "none" });
     this.setState({ allow7: "block" });
   }
-  changeCounter(){
+  changeCounter = () =>{
     this.setState({ disp8: "none" });
     this.setState({ allow8: "block" });
   }
-  closeAppBMI() {
+  closeAppBMI = () => {
     this.setState({ allow: "none" });
     this.setState({ disp: "block" });
   }
-  closeAppAtoD() {
+  closeAppAtoD = () => {
     this.setState({ allow1: "none" });
     this.setState({ disp1: "block" });
   }
-  closeAppAlert() {
+  closeAppAlert = () => {
     this.setState({ allow2: "none" });
     this.setState({ disp2: "block" });
   }
-  closeAppTime() {
+  closeAppTime = () => {
     this.setState({ allow3: "none" });
     this.setState({ disp3: "block" });
   }
-  closeAppNumber() {
+  closeAppNumber = () => {
     this.setState({ allow4: "none" });
     this.setState({ disp4: "block" });
   }
-  closeAppMirror() {
+  closeAppMirror = () => {
     this.setState({ allow5: "none" });
     this.setState({ disp5: "block" });
   }
-  closeAppExpense() {
+  closeAppExpense = () => {
     this.setState({ allow6: "none" });
     this.setState({ disp6: "block" });
   }
-  closeAppPrime() {
+  closeAppPrime = () => {
     this.setState({ allow7: "none" });
     this.setState({ disp7: "block" });
   }
-  closeAppCounter(){
+  closeAppCounter = () => {
     this.setState({ allow8: "none" });
     this.setState({ disp8: "block" });
   }

@@ -8,15 +8,13 @@ class BmiForm extends React.Component {
       height: "",
       weight: "",
     };
-    this.handeleWeigthChange = this.handeleWeigthChange.bind(this);
-    this.handleHeigthChange = this.handleHeigthChange.bind(this);
   }
-  handeleWeigthChange(event) {
+  handeleWeigthChange = (event) => {
     this.setState({
       weight: event.target.value,
     });
   }
-  handleHeigthChange(event) {
+  handleHeigthChange = (event) => {
     this.setState({
       height: event.target.value,
     });
