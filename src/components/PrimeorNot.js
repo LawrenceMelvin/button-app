@@ -1,32 +1,31 @@
-import React, { Component } from "react";
-import "./Formstyle.css";
+import React,{ useState } from 'react'
+import './Formstyle.css'
 
-export class PrimeorNot extends Component {
-  constructor() {
-    super();
-    this.state = {
-      prime: "",
-    };
+const PrimeorNot = () => {
+  const[number, setNumber] = useState()
+  const getNumber = (e) => {
+    const num = e.target.value
+    setNumber(num)
   }
-  primeNumber = (event) => {
-    this.setState({ prime: event.target.value });
+  function isPrime(n){
+    // Corner case
+    if (n <= 1)
+        return false;
+    // Check from 2 to n-1
+    for (let i = 2; i < n; i++)
+        if (n % i == 0)
+            return false;
+  
+    return true;
   }
-  calculatePrime() {
-    let prime = this.state.prime;
-    return prime;
-  }
-  render() {
-    let prime = this.calculatePrime();
-    return (
-      <div>
-        <form className="formDetails">
-          Enter the Number ={" "}
-          <input type="number" maxLength="6" onChange={this.primeNumber} />
-          <h4>{prime}</h4>
-        </form>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <form className="formDetails">
+        Enter the number<input type="number" maxLength='5' onChange={getNumber} />
+        <h3>{isPrime(number) ? "Prime" : "Not Prime"}</h3>
+      </form>
+    </div>
+  )
 }
 
-export default PrimeorNot;
+export default PrimeorNot
