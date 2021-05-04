@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Square from './Square'
 
 const Board = () => {
@@ -62,9 +62,6 @@ const Board = () => {
         }
         return <>{value}</>
     }
-
-
-
     return (
         <div>
             <h4>{player ? "Player 1": "Player 2"}</h4>
